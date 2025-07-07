@@ -5,7 +5,6 @@ type FrameProps = {
 
 export const Frame = ({fileUrls, setCurrentFrame} : FrameProps) => {
     const handleNext = () => setCurrentFrame((prev) => (prev + 1) % fileUrls.length);
-    
     const handlePrev = () => setCurrentFrame((prev) => (prev - 1 + fileUrls.length) % fileUrls.length);
 
     return (
